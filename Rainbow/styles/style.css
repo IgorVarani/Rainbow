@@ -1,10 +1,39 @@
+/**=====================
+**======= FONTES =======
+**=====================*/
+
+/*
+! Títulos, botões
+font-family: 'Orbitron', sans-serif;
+
+! Descrições, preços, detalhes
+font-family: 'Share Mono Tech', sans-serif;
+
+! Menu, navbar, nome dos produtos
+font-family: 'Audiowide', sans-serif;
+*/
+
+/**=====================
+**======= CONFIGS ======
+**=====================*/
+
 body{
     background-color: black;
     color: white;
 }
 
+@keyframes rgbFlow{
+    0% { background-position: 0%; }
+    100% { background-position: 400%; }
+}
+
+@keyframes rgbGlow {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 400% 50%; }
+}
+
 /**=====================
-**======= PEDIDO =======
+**======= CAIXA ========
 **=====================*/
 
 #caixa{
@@ -23,35 +52,34 @@ body{
     animation: rgbFlow 10s linear infinite;
 }
 
-@keyframes rgbFlow{
-    0% { background-position: 0%; }
-    100% { background-position: 400%; }
-}
-
 #subtitulo{
     color: white;
     font-family: 'Orbitron', sans-serif;
 }
 
 #iniciarPedido, #fecharPedido{
+    font-family: 'Orbitron', sans-serif;
     color: white;
-    border: 3px solid transparent;
+    border: 2px solid transparent;
+    padding: 5px;
     border-radius: 5px;
 
     background: linear-gradient(#000, #000) padding-box,
                 linear-gradient(270deg, red, yellow, lime, cyan, blue, magenta, red) border-box;
     background-size: 400% 400%;
     animation: rgbGlow 10s linear infinite;
+
+    cursor: pointer;
+    transition: 0.1s ease;
 }
 
-@keyframes rgbGlow{
-    0% { background-position: 0% 50%; }
-    100% { background-position: 400% 50%; }
+#iniciarPedido:hover, #fecharPedido:hover{
+    transform: scale(1.1);
 }
 
-#iniciarPedido:hover, #fecharPedido{
-    scale: (1.2);
-}
+/**=====================
+**======= PEDIDO =======
+**=====================*/
 
 #modalPedido{
     position: fixed;
@@ -77,8 +105,64 @@ body{
     background: #111;
     color: white;
     padding: 30px;
-    border-radius: 10px;
     text-align: center;
+
+    border: 3px solid transparent;
+    border-radius: 25px;
+
+    background: linear-gradient(#000, #000) padding-box,
+                linear-gradient(270deg, red, yellow, lime, cyan, blue, magenta, red) border-box;
+    background-size: 400% 400%;
+    animation: rgbGlow 10s linear infinite;
+}
+
+#tituloPedido{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+
+    background: linear-gradient(270deg, red, orange, yellow, lime, cyan, blue, magenta, red);
+    background-size: 400%;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: rgbFlow 10s linear infinite;
+}
+
+.labelPedido{
+    color: white;
+    font-family: 'Audiowide', sans-serif;
+}
+
+.selectPedido{
+    font-family: 'Share Tech Mono', monospace;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-align: left;
+    color: white;
+    padding: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 5px;
+
+    background: linear-gradient(#000, #000) padding-box,
+                linear-gradient(270deg, red, yellow, lime, cyan, blue, magenta, red) border-box;
+    background-size: 400% 400%;
+    animation: rgbGlow 10s linear infinite;
+
+    transition: 0.1s ease;
+}
+
+.selectPedido:hover{
+    transform: scaleY(1.2);
+}
+
+.optionPedido{
+    color: white;
+    background-color: black;
 }
 
 /**=====================
@@ -133,14 +217,9 @@ body{
     animation: rgbGlow 10s linear infinite;
 }
 
-@keyframes rgbGlow{
-    0% { background-position: 0% 50%; }
-    100% { background-position: 400% 50%; }
-}
-
 #slides{
     position: relative;
-    top: -30px;
+    top: -40px;
     width: 300px;
     height: 450px;
 }
@@ -155,4 +234,8 @@ body{
 
 .slide.ativo{
     opacity: 1;
+}
+
+#burgerDouble{
+    top: -30px;
 }

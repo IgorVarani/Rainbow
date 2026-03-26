@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rainbow Bites</title>
     <link rel="stylesheet" href="/styles/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Audiowide&
-    family=Share+Tech+Mono&family=Press+Start+2P&family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Audiowide&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
 </head>
 <body>
     
 <!-------------------------
-========== PEDIDO =========
+========== CAIXA ==========
 --------------------------->
 
 <div id="caixa">
@@ -22,31 +21,35 @@
     <button id="iniciarPedido">Iniciar Pedido</button>
 </div>
 
+<!-------------------------
+========== PEDIDO =========
+--------------------------->
+
 <div id="modalPedido" class="oculto">
     <div id="conteudoPedido">
-        <h2>Monte o pedido mais colorido de todos:</h2>
+        <p id="tituloPedido">Monte o pedido mais colorido de todos:</p>
 
-        <label>Hambúrguer:</label>
-        <select>
-            <option>RGBurger</option>
-            <option>Duplo Arco-íris</option>
-            <option>Rainbow Ultra Bacon</option>
+        <label class="labelPedido">Hambúrguer:</label>
+        <select class="selectPedido">
+            <option class="optionPedido">RGBurger</option>
+            <option class="optionPedido">Duplo Arco-íris</option>
+            <option class="optionPedido">Rainbow Ultra Bacon</option>
         </select>
 
         <br><br>
 
-        <label>Acompanhamento:</label>
-        <select>
-            <option>Rainbow Fries</option>
-            <option>RGB Nuggets</option>
+        <label class="labelPedido">Acompanhamento:</label>
+        <select class="selectPedido">
+            <option class="optionPedido">Rainbow Fries</option>
+            <option class="optionPedido">RGB Nuggets</option>
         </select>
 
         <br><br>
 
-        <label>Bebida:</label>
-        <select>
-            <option>Coca-Cola Arco-íris</option>
-            <option>Rainbow Shake</option>
+        <label class="labelPedido">Bebida:</label>
+        <select class="selectPedido">
+            <option class="optionPedido">Coca-Cola Arco-íris</option>
+            <option class="optionPedido">Rainbow Shake</option>
         </select>
 
         <br><br>
@@ -65,9 +68,12 @@
     <button id="bAnterior">&#10094;</button>
 
     <div id="slides">
-        <img src="/assets/img/Rainbow Burguer.png" class="slide ativo">
+        <img src="/assets/img/Rainbow Burger.png" class="slide ativo">
+        <img src="/assets/img/Rainbow Burger Bacon.png" class="slide">
+        <img src="/assets/img/Rainbow Burger Double.png" class="slide" id="burgerDouble">
         <img src="/assets/img/Rainbow Fries.png" class="slide">
         <img src="/assets/img/Rainbow Milkshake.png" class="slide">
+        <img src="/assets/img/Rainbow Nuggets.png" class="slide">
         <img src="/assets/img/Rainbow Soda.png" class="slide">
     </div>
 
