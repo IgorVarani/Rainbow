@@ -5,9 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rainbow Bites</title>
     <link rel="stylesheet" href="/styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Audiowide&
+    family=Share+Tech+Mono&family=Press+Start+2P&family=Russo+One&display=swap" rel="stylesheet">
+
 </head>
 <body>
     
+<!-------------------------
+========== PEDIDO =========
+--------------------------->
+
+<div id="caixa">
+    <h1 id="titulo">Rainbow Bites</h1>
+    <h2 id="subtitulo">Com quantas cores você quer o seu pedido hoje?</h2>
+
+    <button id="iniciarPedido">Iniciar Pedido</button>
+</div>
+
+<div id="modalPedido" class="oculto">
+    <div id="conteudoPedido">
+        <h2>Monte o pedido mais colorido de todos:</h2>
+
+        <label>Hambúrguer:</label>
+        <select>
+            <option>RGBurger</option>
+            <option>Duplo Arco-íris</option>
+            <option>Rainbow Ultra Bacon</option>
+        </select>
+
+        <br><br>
+
+        <label>Acompanhamento:</label>
+        <select>
+            <option>Rainbow Fries</option>
+            <option>RGB Nuggets</option>
+        </select>
+
+        <br><br>
+
+        <label>Bebida:</label>
+        <select>
+            <option>Coca-Cola Arco-íris</option>
+            <option>Rainbow Shake</option>
+        </select>
+
+        <br><br>
+
+        <button id="fecharPedido">Fechar Pedido</button>
+    </div>
+</div>
+
+<script src="/js/pedido.js"></script> <!-- JS do Pedido. -->
+
 <!-------------------------
 ======== CARROSSEL ========
 --------------------------->
@@ -25,7 +74,7 @@
     <button id="bProximo">&#10095;</button>
 </div> 
     
-<script src="/js/script.js"></script> <!-- Primeiro JS aqui. -->
+<script src="/js/carrossel.js"></script> <!-- JS do Carrossel. -->
 
 <!-------------------------
 ======== CARROSSEL ========

@@ -1,12 +1,128 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
+body{
     background-color: black;
+    color: white;
+}
+
+/**=====================
+**======= PEDIDO =======
+**=====================*/
+
+#caixa{
+
+}
+
+#titulo{
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(270deg, red, orange, yellow, lime, cyan, blue, magenta, red);
+    background-size: 400%;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: rgbFlow 10s linear infinite;
+}
+
+@keyframes rgbFlow{
+    0% { background-position: 0%; }
+    100% { background-position: 400%; }
+}
+
+#subtitulo{
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#modalPedido{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.oculto{
+    display: none;
+}
+
+#modalPedido:not(.oculto){
+    display: flex;
+}
+
+#conteudoPedido{
+    background: #111;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/**=====================
+**======= BOTÕES =======
+**=====================*/
+
+#bAnterior, #bProximo{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    background: rgba(0, 0, 0, 0 );
+    color: white;
+    border: none;
+    padding: 0px;
+    cursor: pointer;
+    z-index: 10;
+
+    transition: 0.1s ease;
+}
+
+#bAnterior:hover, #bProximo:hover{
+    transform: translateY(-50%) scale(1.4);
+}
+
+#bAnterior{
+    left: 10px;
+}
+
+#bProximo{
+    right: 10px;
+}
+
+/**=====================
+**====== SLIDES ========
+**=====================*/
+
+#carrossel{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    z-index: 1000;
+    border: 3px solid transparent;
+    border-radius: 25px;
+
+    background: linear-gradient(#000, #000) padding-box,
+                linear-gradient(270deg, red, yellow, lime, cyan, blue, magenta, red) border-box;
+    background-size: 400% 400%;
+    animation: rgbGlow 10s linear infinite;
+}
+
+@keyframes rgbGlow{
+    0% { background-position: 0% 50%; }
+    100% { background-position: 400% 50%; }
 }
 
 #slides{
     position: relative;
+    top: -30px;
     width: 300px;
-    height: 425px;
+    height: 450px;
 }
 
 .slide{
@@ -14,7 +130,7 @@ body {
     width: 100%;
     height: 100%;
     opacity: 0;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 .slide.ativo{
