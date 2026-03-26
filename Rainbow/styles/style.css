@@ -52,6 +52,10 @@ body{
     animation: rgbFlow 10s linear infinite;
 }
 
+.aCaixa{
+    text-decoration: none;
+}
+
 #subtitulo{
     color: white;
     font-family: 'Orbitron', sans-serif;
