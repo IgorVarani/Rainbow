@@ -33,6 +33,26 @@ body{
     font-family: 'Orbitron', sans-serif;
 }
 
+#iniciarPedido, #fecharPedido{
+    color: white;
+    border: 3px solid transparent;
+    border-radius: 5px;
+
+    background: linear-gradient(#000, #000) padding-box,
+                linear-gradient(270deg, red, yellow, lime, cyan, blue, magenta, red) border-box;
+    background-size: 400% 400%;
+    animation: rgbGlow 10s linear infinite;
+}
+
+@keyframes rgbGlow{
+    0% { background-position: 0% 50%; }
+    100% { background-position: 400% 50%; }
+}
+
+#iniciarPedido:hover, #fecharPedido{
+    scale: (1.2);
+}
+
 #modalPedido{
     position: fixed;
     top: 0;
