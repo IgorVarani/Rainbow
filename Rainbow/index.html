@@ -9,33 +9,48 @@
 
 </head>
 <body>
-    
+
+<header>
+
 <!-------------------------
-========== CAIXA ==========
+====== MENU LATERAL =======
 --------------------------->
 
-<div id="caixa">
-    <button id="menuBurger"></button>
-    
+<button id="botao-menu">&#9776;</button>
 
+<div id="div-menu" class="oculto1">
+    <!--* <nav> é o menu hambúrguer ou menu lateral. -->
+    <nav id="nav-menu">
+        <ul id="menu-itens">
+            <li><a href="" class="linkMenu">Cardápio</a></li>
+            <li><a href="" class="linkMenu">Lançamentos</a></li>
+        </ul>
+    </nav>
+</div>
+
+<script src="/js/menu.js"></script> <!-- JS do menu Hambúrguer. -->
+
+<!-------------------------
+===== TÍTULO/SUBTÍTULO ====
+--------------------------->
+
+<div id="div-titulo">
     <h1 id="titulo">Rainbow Bites</h1>
-
-    <li id="liCaixa">
-        <a href="#" class="aCaixa">Cardápio</a>
-        <a href="#" class="aCaixa">Lançamentos</a>
-    </li>
-
+        <ul id="ul-titulo">
+            <li class="liTitulo"><a href="#" class="linkTitulo">Cardápio</a></li>
+            <li class="liTitulo"><a href="#" class="linkTitulo">Lançamentos</a></li>
+        </ul>
     <h2 id="subtitulo">Com quantas cores você quer o seu pedido hoje?</h2>
-    <button id="iniciarPedido">Iniciar Pedido</button>
+    <button id="botao-iniciar-pedido">Iniciar Pedido</button>
 </div>
 
 <!-------------------------
 ========== PEDIDO =========
 --------------------------->
 
-<div id="modalPedido" class="oculto">
-    <div id="conteudoPedido">
-        <p id="tituloPedido">Monte o pedido mais colorido de todos:</p>
+<div id="div-pedido" class="oculto2">
+    <div id="conteudo-pedido">
+        <p id="titulo-pedido">Monte o pedido mais colorido de todos:</p>
 
         <label class="labelPedido">Hambúrguer:</label>
         <select class="selectPedido">
@@ -62,36 +77,38 @@
 
         <br><br>
 
-        <button id="fecharPedido">Fechar Pedido</button>
+        <button id="botao-fechar-pedido">Fechar Pedido</button>
     </div>
 </div>
 
 <script src="/js/pedido.js"></script> <!-- JS do Pedido. -->
 
+</header>
+
 <!-------------------------
 ======== CARROSSEL ========
 --------------------------->
 
-<div id="carrossel">
-    <button id="bAnterior">&#10094;</button>
+<div id="div-carrossel">
+    <button id="botao-anterior">&#10094;</button>
 
-    <div id="slides">
+    <div id="div-slides">
         <img src="/assets/img/Rainbow Burger.png" class="slide ativo">
         <img src="/assets/img/Rainbow Burger Bacon.png" class="slide">
-        <img src="/assets/img/Rainbow Burger Double.png" class="slide" id="burgerDouble">
+        <img src="/assets/img/Rainbow Burger Double.png" class="slide" id="burger-double">
         <img src="/assets/img/Rainbow Fries.png" class="slide">
         <img src="/assets/img/Rainbow Milkshake.png" class="slide">
         <img src="/assets/img/Rainbow Nuggets.png" class="slide">
         <img src="/assets/img/Rainbow Soda.png" class="slide">
     </div>
 
-    <button id="bProximo">&#10095;</button>
-</div> 
+    <button id="botao-proximo">&#10095;</button>
+</div>
     
 <script src="/js/carrossel.js"></script> <!-- JS do Carrossel. -->
 
 <!-------------------------
-======== CARROSSEL ========
+======== ????????? ========
 --------------------------->
 
 </body>

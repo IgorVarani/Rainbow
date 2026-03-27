@@ -1,8 +1,8 @@
 let slides = document.querySelectorAll(".slide");
 let index = 0;
 
-const botaoAnterior = document.getElementById("bAnterior");
-const botaoProximo = document.getElementById("bProximo");
+const botaoAnterior = document.getElementById("botao-anterior");
+const botaoProximo = document.getElementById("botao-proximo");
 
 function mostrarSlide(i)
 {

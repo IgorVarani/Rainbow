@@ -1,6 +1,6 @@
-let botaoIniciar = document.getElementById("iniciarPedido");
-let modal = document.getElementById("modalPedido");
-let fechar = document.getElementById("fecharPedido");
+let botaoIniciar = document.getElementById("botao-iniciar-pedido");
+let modal = document.getElementById("div-pedido");
+let fechar = document.getElementById("botao-fechar-pedido");
 
 botaoIniciar.addEventListener("click", () =>
 {
