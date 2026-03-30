@@ -1,55 +1,41 @@
-let slides = document.querySelectorAll(".slide");
-let index = 0;
+const carrosseis = document.querySelectorAll(".div-carrossel");
 
-const botaoAnterior = document.getElementById("botao-anterior");
-const botaoProximo = document.getElementById("botao-proximo");
-
-function mostrarSlide(i)
+carrosseis.forEach(carrossel =>
 {
-    slides.forEach(slide =>
+    let slides = carrossel.querySelectorAll(".slide");
+    let index = 0;
+
+    const botaoAnterior = carrossel.querySelector(".botao-anterior");
+    const botaoProximo = carrossel.querySelector(".botao-proximo");
+
+    function mostrarSlide(i)
     {
-        slide.classList.remove("ativo");
+        slides.forEach(slide =>
+        {
+            slide.classList.remove("ativo");
+        });
+
+        slides[i].classList.add("ativo");
+    }
+
+    botaoProximo.addEventListener("click", () =>
+    {
+        index++;
+        if (index >= slides.length) index = 0;
+        mostrarSlide(index);
     });
 
-    slides[i].classList.add("ativo");
-}
-
-botaoProximo.addEventListener("click", () =>
-{
-    index++;
-
-    if (index >= slides.length)
+    botaoAnterior.addEventListener("click", () =>
     {
-        index = 0;
-    }
+        index--;
+        if (index < 0) index = slides.length - 1;
+        mostrarSlide(index);
+    });
 
-    mostrarSlide(index);
+    setInterval(() =>
+    {
+        index++;
+        if (index >= slides.length) index = 0;
+        mostrarSlide(index);
+    }, 5000);
 });
-
-botaoAnterior.addEventListener("click", () =>
-{
-    index--;
-
-    if (index < 0)
-    {
-        index = slides.length - 1;
-    }
-
-    mostrarSlide(index);
-});
-
-//! Autoplay:
-
-function proximoSlide()
-{
-    index++;
-
-    if (index >= slides.length)
-    {
-        index = 0;
-    }
-
-    mostrarSlide(index);
-}
-
-let autoplay = setInterval(proximoSlide, 5000);

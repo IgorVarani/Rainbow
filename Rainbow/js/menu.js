@@ -1,15 +1,18 @@
-let botaoAbrir = document.getElementById("botao-menu");
+let botao = document.getElementById("botao-menu");
 let nav = document.getElementById("nav-menu");
+let overlay = document.getElementById("div-menu");
 
-botaoAbrir.addEventListener("click", () =>
+botao.addEventListener("click", () =>
 {
     nav.classList.toggle("ativo");
+    overlay.classList.toggle("ativo");
 });
 
-document.addEventListener("click", (e) =>
+overlay.addEventListener("click", (e) =>
 {
-    if (!nav.contains(e.target) && e.target !== botaoAbrir)
+    if (!nav.contains(e.target))
     {
         nav.classList.remove("ativo");
+        overlay.classList.remove("ativo");
     }
 });

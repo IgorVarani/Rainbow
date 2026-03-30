@@ -6,56 +6,66 @@
     <title>Rainbow Bites</title>
     <link rel="stylesheet" href="/styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Audiowide&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 <body>
 
-<header>
-
 <!-------------------------
-====== MENU LATERAL =======
+===========================
+========== HEADER =========
+===========================
 --------------------------->
-
-<button id="botao-menu">&#9776;</button>
-
-<div id="div-menu" class="oculto1">
-    <!--* <nav> é o menu hambúrguer ou menu lateral. -->
-    <nav id="nav-menu">
-        <ul id="menu-itens">
-            <li><a href="" class="linkMenu">Cardápio</a></li>
-            <li><a href="" class="linkMenu">Lançamentos</a></li>
-        </ul>
-    </nav>
-</div>
-
-<script src="/js/menu.js"></script> <!-- JS do menu Hambúrguer. -->
 
 <!-------------------------
 ===== TÍTULO/SUBTÍTULO ====
 --------------------------->
 
-<div id="div-titulo">
-    <h1 id="titulo">Rainbow Bites</h1>
-        <ul id="ul-titulo">
-            <li class="liTitulo"><a href="#" class="linkTitulo">Cardápio</a></li>
-            <li class="liTitulo"><a href="#" class="linkTitulo">Lançamentos</a></li>
-        </ul>
+<header>
+
+<div id="div-topo">
+    <div id="div-titulo">
+        <button id="botao-menu">&#9776;</button>
+        <h1 id="titulo">Rainbow Bites</h1>
+        <button id="botao-login">Entrar</button>
+    </div>
+    
+    <ul id="ul-titulo">
+        <li class="liTitulo"><a href="/pages/cardapio.html" class="linkTitulo">Cardápio</a></li>
+        <li class="liTitulo"><a href="/pages/lancamentos.html" class="linkTitulo">Lançamentos</a></li>
+    </ul>
+    
     <h2 id="subtitulo">Com quantas cores você quer o seu pedido hoje?</h2>
     <button id="botao-iniciar-pedido">Iniciar Pedido</button>
 </div>
 
 <!-------------------------
+====== MENU LATERAL =======
+--------------------------->
+
+<div id="div-menu">
+    <!--* <nav> é o menu hambúrguer ou menu lateral. -->
+    <nav id="nav-menu">
+        <ul id="menu-itens">
+            <li><a href="/pages/cardapio.html" class="linkMenu"><i class="fa-solid fa-book"></i>Cardápio</a></li>
+            <li><a href="/pages/lancamentos.html" class="linkMenu"><i class="fa-solid fa-tag"></i>Lançamentos</a></li>
+        </ul>
+    </nav>
+</div>
+
+<script src="/js/menu.js"></script> <!-- JS do Menu Hambúrguer. -->
+
+<!-------------------------
 ========== PEDIDO =========
 --------------------------->
 
-<div id="div-pedido" class="oculto2">
+<div id="div-pedido" class="oculto">
     <div id="conteudo-pedido">
         <p id="titulo-pedido">Monte o pedido mais colorido de todos:</p>
 
         <label class="labelPedido">Hambúrguer:</label>
         <select class="selectPedido">
             <option class="optionPedido">RGBurger</option>
-            <option class="optionPedido">Duplo Arco-íris</option>
             <option class="optionPedido">Rainbow Ultra Bacon</option>
         </select>
 
@@ -85,31 +95,61 @@
 
 </header>
 
+<!------------------------------
+================================
+====== CONTEÚDO PRINCIPAL ======
+================================
+-------------------------------->
+
+<hr id="linha-decorativa">
+
+<section id="conteudo-principal">
+
 <!-------------------------
 ======== CARROSSEL ========
 --------------------------->
 
-<div id="div-carrossel">
-    <button id="botao-anterior">&#10094;</button>
+<div id="div-carrosseis">
 
-    <div id="div-slides">
-        <img src="/assets/img/Rainbow Burger.png" class="slide ativo">
-        <img src="/assets/img/Rainbow Burger Bacon.png" class="slide">
-        <img src="/assets/img/Rainbow Burger Double.png" class="slide" id="burger-double">
-        <img src="/assets/img/Rainbow Fries.png" class="slide">
-        <img src="/assets/img/Rainbow Milkshake.png" class="slide">
-        <img src="/assets/img/Rainbow Nuggets.png" class="slide">
-        <img src="/assets/img/Rainbow Soda.png" class="slide">
+    <div class="div-carrossel">
+        <button class="botao-anterior">&#10094;</button>
+        
+        <div class="div-slides">
+            <img src="/assets/img/Rainbow Burger.png" class="slide ativo">
+            <img src="/assets/img/Rainbow Burger Bacon.png" class="slide">
+        </div>
+        
+        <button class="botao-proximo">&#10095;</button>
+    </div>
+    
+        
+    <div class="div-carrossel">
+        <button class="botao-anterior">&#10094;</button>
+
+        <div class="div-slides">
+            <img src="/assets/img/Rainbow Milkshake.png" class="slide ativo">
+            <img src="/assets/img/Rainbow Soda.png" class="slide">
+        </div>
+
+        <button class="botao-proximo">&#10095;</button>
     </div>
 
-    <button id="botao-proximo">&#10095;</button>
+    <div class="div-carrossel">
+        <button class="botao-anterior">&#10094;</button>
+
+        <div class="div-slides">
+        <img src="/assets/img/Rainbow Fries.png" class="slide ativo">
+        <img src="/assets/img/Rainbow Nuggets.png" class="slide">
+        </div>
+
+        <button class="botao-proximo">&#10095;</button>
+    </div>
+
 </div>
     
 <script src="/js/carrossel.js"></script> <!-- JS do Carrossel. -->
 
-<!-------------------------
-======== ????????? ========
---------------------------->
+</section>
 
 </body>
 </html>
