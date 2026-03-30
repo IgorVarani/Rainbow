@@ -27,6 +27,7 @@ body{
     background-color: #191919;
     color: white;
     margin: 0;
+    overflow-y: scroll;
 }
 
 @keyframes rgbFlow{
@@ -439,4 +440,148 @@ header{
 
 .botao-proximo{
     right: 10px;
+}
+
+
+
+/**=====================
+**======= FOOTER =======
+**=====================*/
+
+
+
+#footer{
+    margin-top: 100px;
+    padding: 40px 20px 10px 20px;
+    border-top: 3px solid transparent;
+    background: linear-gradient(#000, #000) padding-box,
+                linear-gradient(270deg, red, yellow, lime, cyan, blue, magenta, red) border-box;
+
+    background-size: 400% 400%;
+    animation: rgbGlow 10s linear infinite;
+}
+
+#div-footer{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-coluna{
+    max-width: 350px;
+    margin: 10px;
+}
+
+.footer-titulo{
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 20px;
+    background: linear-gradient(270deg, red, orange, yellow, lime, cyan, blue, magenta, red);
+    background-size: 400%;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: rgbFlow 10s linear infinite;
+}
+
+.footer-texto{
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 14px;
+}
+
+.fa-solid.fa-envelope, .fa-solid.fa-phone{
+    margin-right: 5px;
+}
+
+.footer-lista{
+    list-style: none;
+    padding: 0;
+}
+
+.footer-lista li{
+    margin-bottom: 10px;
+}
+
+.footer-lista a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Audiowide', sans-serif;
+    transition: 0.2s;
+}
+
+.footer-lista a:hover{
+    text-decoration: underline;
+}
+
+.footer-redes{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-redes a{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: white;
+    font-size: 20px;
+    margin-right: 15px;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.footer-redes a:hover{
+    transform: scale(1.2);
+}
+
+#footer-direitos{
+    text-align: center;
+    margin-top: 30px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+
+
+/**===============================
+**========== SCROLLBAR ===========
+**================================*/
+
+
+
+#scrollbar-track{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 12px;
+    height: 100vh;
+    background: #191919;
+    z-index: 9999;
+}
+
+#scrollbar-thumb{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    border-radius: 25px;
+
+    background: linear-gradient(
+        270deg,
+        red, yellow, lime, cyan, blue, magenta, red
+    );
+
+    background-size: 400% 100%;
+    animation: rgbScroll 10s linear infinite;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+@keyframes rgbScroll{
+    0% { background-position: 0% 0%; }
+    100% { background-position: 400% 0%; }
 }
