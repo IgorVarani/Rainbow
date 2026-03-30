@@ -1,0 +1,140 @@
+body{
+    margin: 0;
+    background-color: #191919;
+    color: white;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+/* ANIMAÇÕES */
+@keyframes rgbFlow{
+    0% { background-position: 0%; }
+    100% { background-position: 400%; }
+}
+
+@keyframes rgbGlow{
+    0% { background-position: 0% 50%; }
+    100% { background-position: 400% 50%; }
+}
+
+/* HEADER */
+
+#header-lancamentos{
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#header-links{
+    display: flex;
+    gap: 20px;
+    margin-left: 15px;
+}
+
+#header-links a{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+#header-links a:hover{
+    transform: scale(1.1);
+    filter: brightness(1.3);
+}
+
+#titulo-lancamentos{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 40px;
+
+    background: linear-gradient(270deg, red, orange, yellow, lime, cyan, blue, magenta, red);
+    background-size: 400%;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: rgbFlow 10s linear infinite;
+}
+
+#subtitulo-lancamentos{
+    font-family: 'Audiowide', sans-serif;
+}
+
+/* GRID */
+
+#container-lancamentos{
+    padding: 40px;
+}
+
+.grid-lancamentos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* CARD */
+
+.card-lancamento{
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+
+    border: 3px solid transparent;
+
+    background: linear-gradient(#000, #000) padding-box,
+                linear-gradient(270deg, red, yellow, lime, cyan, blue, magenta, red) border-box;
+
+    background-size: 400% 400%;
+    animation: rgbGlow 10s linear infinite;
+
+    transition: 0.3s;
+}
+
+.card-lancamento:hover{
+    transform: scale(1.05);
+}
+
+.card-lancamento img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-lancamento .info{
+    padding: 15px;
+}
+
+.card-lancamento h3{
+    font-family: 'Orbitron', sans-serif;
+}
+
+.card-lancamento p{
+    font-size: 14px;
+}
+
+/* BADGE */
+
+.badge{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+
+    font-family: 'Audiowide', sans-serif;
+    font-size: 12px;
+
+    background: linear-gradient(270deg, red, yellow, lime, cyan, blue, magenta, red);
+    background-size: 400%;
+    animation: rgbFlow 10s linear infinite;
+}
+
+/* VARIAÇÕES */
+
+.destaque{
+    grid-column: span 2;
+}
+
+.grande{
+    grid-column: span 2;
+}

@@ -1,0 +1,155 @@
+/* CONFIG */
+
+body{
+    margin: 0;
+    height: 100vh;
+    background-size: cover;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)),
+                linear-gradient(to left, black 10%, transparent 80%),
+                url("/assets/bg/loginBG.gif");
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ANIMAÇÕES */
+
+@keyframes rgbFlow{
+    0% { background-position: 0%; }
+    100% { background-position: 400%; }
+}
+
+@keyframes rgbGlow{
+    0% { background-position: 0% 50%; }
+    100% { background-position: 400% 50%; }
+}
+
+/* CONTAINER */
+
+#container-login{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CARD */
+
+#card-login{
+    width: 320px;
+    padding: 30px;
+    text-align: center;
+
+    border-radius: 20px;
+    border: 3px solid transparent;
+
+    background: linear-gradient(#000, #000) padding-box,
+                linear-gradient(270deg, red, yellow, lime, cyan, blue, magenta, red) border-box;
+
+    background-size: 400% 400%;
+    animation: rgbGlow 10s linear infinite;
+}
+
+/* TÍTULO */
+
+#titulo-login{
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 30px;
+
+    background: linear-gradient(270deg, red, orange, yellow, lime, cyan, blue, magenta, red);
+    background-size: 400%;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: rgbFlow 10s linear infinite;
+}
+
+/* INPUTS */
+
+.input-group{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    border-radius: 5px;
+    border: 2px solid transparent;
+
+    background: linear-gradient(#000, #000) padding-box,
+                linear-gradient(270deg, red, yellow, lime, cyan, blue, magenta, red) border-box;
+
+    background-size: 400% 400%;
+    animation: rgbGlow 10s linear infinite;
+}
+
+.input-group i{
+    margin: 0 10px;
+}
+
+.input-group input{
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+/* BOTÃO */
+
+#botao-login{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+
+    color: white;
+    border-radius: 5px;
+    border: 2px solid transparent;
+
+    background: linear-gradient(#000, #000) padding-box,
+                linear-gradient(270deg, red, yellow, lime, cyan, blue, magenta, red) border-box;
+
+    background-size: 400% 400%;
+    animation: rgbGlow 10s linear infinite;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#botao-login:hover{
+    transform: scale(1.05);
+}
+
+/* TEXTO EXTRA */
+
+#extra{
+    margin-top: 15px;
+    font-size: 13px;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+#extra a{
+    color: white;
+    text-decoration: underline;
+}
+
+/* VOLTAR */
+
+#voltar{
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+}
+
+#voltar:hover{
+    text-decoration: underline;
+}
