@@ -1,3 +1,22 @@
+/*?=====================*/
+/*?    ⬇️ FONTES ⬇️    */
+/*?=====================*/
+
+/*
+* Títulos, botões
+font-family: 'Orbitron', sans-serif;
+
+* Descrições, preços, detalhes
+font-family: 'Share Mono Tech', sans-serif;
+
+* Menu, navbar, nome dos produtos
+font-family: 'Audiowide', sans-serif;
+*/
+
+/*?======================*/
+/*?    ⬇️ CONFIGS ⬇️    */
+/*?======================*/
+
 @keyframes rgbFlow{
     0% { background-position: 0%; }
     100% { background-position: 400%; }
@@ -15,7 +34,9 @@ body{
     color: white;
 }
 
-/* ================= NAVBAR ================= */
+/*?=====================*/
+/*?    ⬇️ NAVBAR ⬇️    */
+/*?=====================*/
 
 #navbar{
     position: sticky;
@@ -50,7 +71,9 @@ body{
     transform: scale(1.1);
 }
 
-/* ================= HEADER ================= */
+/*?=====================*/
+/*?    ⬇️ HEADER ⬇️    */
+/*?=====================*/
 
 #header-cardapio{
     text-align: center;
@@ -78,7 +101,9 @@ body{
     margin-bottom: -20px;
 }
 
-/* ================= CONTEÚDO ================= */
+/*?=====================*/
+/*?    ⬇️ CARDS ⬇️     */
+/*?=====================*/
 
 .categoria{
     margin: 40px 0;
@@ -92,8 +117,6 @@ body{
     justify-content: center;
     gap: 30px;
 }
-
-/* ================= CARD ================= */
 
 .card{
     width: 250px;

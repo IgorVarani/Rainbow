@@ -1,27 +1,21 @@
-/**=====================
-**======= FONTES =======
-**=====================*/
-
-
+/*?=====================*/
+/*?    ⬇️ FONTES ⬇️    */
+/*?=====================*/
 
 /*
-! Títulos, botões
+* Títulos, botões
 font-family: 'Orbitron', sans-serif;
 
-! Descrições, preços, detalhes
+* Descrições, preços, detalhes
 font-family: 'Share Mono Tech', sans-serif;
 
-! Menu, navbar, nome dos produtos
+* Menu, navbar, nome dos produtos
 font-family: 'Audiowide', sans-serif;
 */
 
-
-
-/**=====================
-**======= CONFIGS ======
-**=====================*/
-
-
+/*?======================*/
+/*?    ⬇️ CONFIGS ⬇️    */
+/*?======================*/
 
 body{
     background-color: #191919;
@@ -57,13 +51,9 @@ header{
     min-height: 450px;
 }
 
-
-
-/**===============================
-**======= TÍTULO/SUBTÍTULO =======
-**================================*/
-
-
+/*?=====================*/
+/*?    ⬇️ HEADER ⬇️    */
+/*?=====================*/
 
 #div-titulo{
     display: flex;
@@ -149,13 +139,9 @@ header{
     font-family: 'Audiowide', sans-serif;
 }
 
-
-
-/**============================
-**======= MENU LATERAL ========
-**============================*/
-
-
+/*?===========================*/
+/*?    ⬇️ MENU LATERAL ⬇️    */
+/*?===========================*/
 
 #div-menu{
     position: fixed;
@@ -239,13 +225,9 @@ header{
     margin-bottom: 15px;
 }
 
-
-
-/**=====================
-**======= PEDIDO =======
-**=====================*/
-
-
+/*?=====================*/
+/*?    ⬇️ PEDIDO ⬇️    */
+/*?=====================*/
 
 #botao-iniciar-pedido{
     margin-left: 4%;
@@ -312,8 +294,6 @@ header{
     font-family: 'Orbitron', sans-serif;
     font-size: 20px;
     font-weight: bold;
-
-        
 }
 
 .labelPedido{
@@ -351,13 +331,9 @@ header{
     background-color: black;
 }
 
-
-
-/**==============================
-**===== CONTEÚDO PRINCIPAL ======
-**===============================*/
-
-
+/*?========================*/
+/*?    ⬇️ CARROSSEL ⬇️    */
+/*?========================*/
 
 #linha-decorativa{
     margin: 0;
@@ -368,14 +344,6 @@ header{
     background-size: 400% 400%;
     animation: rgbGlow 10s linear infinite;
 }
-
-
-
-/**=====================
-**===== CARROSSEL ======
-**=====================*/
-
-
 
 #div-carrosseis{
     display: flex;
@@ -445,13 +413,9 @@ header{
     right: 5px;
 }
 
-
-
-/**=====================
-**======= FOOTER =======
-**=====================*/
-
-
+/*?=====================*/
+/*?    ⬇️ FOOTER ⬇️    */
+/*?=====================*/
 
 #footer{
     margin-top: 100px;

@@ -1,27 +1,21 @@
-/**=====================
-**======= FONTES =======
-**=====================*/
-
-
+/*?=====================*/
+/*?    ⬇️ FONTES ⬇️    */
+/*?=====================*/
 
 /*
-! Títulos
+* Títulos, botões
 font-family: 'Orbitron', sans-serif;
 
-! Textos
-font-family: 'Share Tech Mono', monospace;
+* Descrições, preços, detalhes
+font-family: 'Share Mono Tech', sans-serif;
 
-! UI
+* Menu, navbar, nome dos produtos
 font-family: 'Audiowide', sans-serif;
 */
 
-
-
-/**======================
-**======= CONFIGS =======
-**======================*/
-
-
+/*?======================*/
+/*?    ⬇️ CONFIGS ⬇️    */
+/*?======================*/
 
 body{
     margin: 0;
@@ -35,11 +29,9 @@ body{
     100% { background-position: 400%; }
 }
 
-
-
-/**==========================
-**========= NAVBAR ==========
-**===========================*/
+/*?=====================*/
+/*?    ⬇️ NAVBAR ⬇️    */
+/*?=====================*/
 
 #header-navbar{
     position: sticky;
@@ -80,11 +72,9 @@ body{
     transform: scale(1.1);
 }
 
-
-
-/**==========================
-**========== HEADER =========
-**===========================*/
+/*?=====================*/
+/*?    ⬇️ HEADER ⬇️    */
+/*?=====================*/
 
 #header-lancamentos{
     text-align: center;
@@ -109,11 +99,9 @@ body{
     font-family: 'Audiowide', sans-serif;
 }
 
-
-
-/**==========================
-**====== LANÇAMENTOS ========
-**===========================*/
+/*?=====================*/
+/*?    ⬇️ CARDS ⬇️     */
+/*?=====================*/
 
 #section-lancamentos{
     padding: 40px;
@@ -124,12 +112,6 @@ body{
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
-
-
-
-/**==========================
-**========== CARD ===========
-**===========================*/
 
 .div-lancamento-card{
     display: flex;
@@ -156,12 +138,6 @@ body{
     object-fit: cover;
 }
 
-
-
-/**==========================
-**========== INFO ===========
-**===========================*/
-
 .div-lancamento-info{
     display: flex;
     flex-direction: column;
@@ -181,12 +157,6 @@ body{
     font-size: 14px;
     opacity: 0.8;
 }
-
-
-
-/**==========================
-**========== BADGE ==========
-**===========================*/
 
 .span-badge{
     align-self: flex-start;

@@ -23,7 +23,7 @@ if (botaoIniciar)
     {
         if (!usuarioEstaLogado())
         {
-            alert("Você precisa estar logado para fazer um pedido! Junte-se a nós e descubra cores de sabores incríveis!");
+            alert("Você precisa estar logado para fazer um pedido, junte-se a nós!");
             window.location.href = "/pages/login.html";
             return;
         }
