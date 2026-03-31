@@ -8,84 +8,96 @@
     <link rel="stylesheet" href="/styles/scrollbar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Audiowide&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    
+
 </head>
 
 <body>
 
-<header id="header-lancamentos">
+<!-------------------------
+===========================
+========= NAVBAR ==========
+===========================
+--------------------------->
 
-    <div id="header-links">
-        <a href="/index.html"><i class="fa-solid fa-arrow-rotate-left"></i> Voltar</a>
+<header id="header-navbar">
+
+    <div id="div-navbar-links">
+        <a href="/index.html"><i class="fa-solid fa-arrow-rotate-left"></i> Voltar ao Início</a>
         <a href="/pages/cardapio.html"><i class="fa-solid fa-book"></i> Cardápio</a>
     </div>
 
+</header>
+
+<!-------------------------
+===========================
+======== HEADER ===========
+===========================
+--------------------------->
+
+<header id="header-lancamentos">
+
     <h1 id="titulo-lancamentos">Novidades RGB</h1>
-    <p id="subtitulo-lancamentos">Experimente o que acabou de chegar</p>
+    <p id="texto-subtitulo-lancamentos">Experimente o que acabou de chegar</p>
 
 </header>
 
-<section id="container-lancamentos">
+<!-------------------------
+===========================
+======= LANÇAMENTOS =======
+===========================
+--------------------------->
 
-    <div class="grid-lancamentos">
+<section id="section-lancamentos">
 
-        <!-- CARD 1 -->
-        <div class="card-lancamento destaque">
-            <img src="/assets/img/lancamentos/Rainbow Galaxy Shake.png">
-            <div class="info">
-                <h3>Galaxy Shake</h3>
-                <p>Um milkshake com efeito cósmico RGB</p>
-                <span class="badge">Novo</span>
-            </div>
-        </div>
+    <div id="div-lancamentos-grid">
 
-        <!-- CARD 2 -->
-        <div class="card-lancamento">
-            <img src="/assets/img/lancamentos/Rainbow Neon Burger.png">
-            <div class="info">
-                <h3>Neon Burger</h3>
-                <p>Brilho intenso e sabor explosivo</p>
-                <span class="badge">Novo</span>
-            </div>
-        </div>
+        <div class="div-lancamento-card">
+            <img src="/assets/img/lancamentos/Rainbow Cyber Fries.png">
 
-        <!-- CARD 3 -->
-        <div class="card-lancamento">
-            <img src="/assets/img//lancamentos/Rainbow Cyber Fries.png">
-            <div class="info">
+            <div class="div-lancamento-info">
                 <h3>Cyber Fries</h3>
                 <p>Batatas com energia digital</p>
-                <span class="badge">Novo</span>
+                <span class="span-badge">Novo</span>
             </div>
         </div>
 
-        <!-- CARD 4 -->
-        <div class="card-lancamento grande">
-            <img src="/assets/img/Rainbow Milkshake.png">
-            <div class="info">
-                <h3>Ultra Combo RGB</h3>
-                <p>O combo mais poderoso já criado</p>
-                <span class="badge">Destaque</span>
+        <div class="div-lancamento-card">
+            <img src="/assets/img/lancamentos/Rainbow Galaxy Shake.png">
+
+            <div class="div-lancamento-info">
+                <h3>Galaxy Shake</h3>
+                <p>Um milkshake com efeito cósmico RGB</p>
+                <span class="span-badge">Novo</span>
             </div>
         </div>
 
-        <!-- CARD 5 -->
-        <div class="card-lancamento">
+        <div class="div-lancamento-card">
             <img src="/assets/img/lancamentos/Rainbow Hyper Soda.png">
-            <div class="info">
+
+            <div class="div-lancamento-info">
                 <h3>Hyper Soda</h3>
                 <p>Refresco com efeito neon</p>
-                <span class="badge">Novo</span>
+                <span class="span-badge">Novo</span>
             </div>
         </div>
 
-        <!-- CARD 6 -->
-        <div class="card-lancamento">
-            <img src="/assets/img/Rainbow Milkshake.png">
-            <div class="info">
+        <div class="div-lancamento-card">
+            <img src="/assets/img/lancamentos/Rainbow Neon Burger.png">
+
+            <div class="div-lancamento-info">
+                <h3>Neon Burger</h3>
+                <p>Brilho intenso e sabor explosivo</p>
+                <span class="span-badge">Novo</span>
+            </div>
+        </div>
+
+        <div class="div-lancamento-card">
+            <img src="/assets/img/lancamentos/Rainbow Pixel Nuggets.png">
+
+            <div class="div-lancamento-info">
                 <h3>Pixel Nuggets</h3>
                 <p>Crocância em alta resolução</p>
-                <span class="badge">Novo</span>
+                <span class="span-badge">Novo</span>
             </div>
         </div>
 
@@ -93,7 +105,10 @@
 
 </section>
 
-<!-- Scrollbar -->
+<!-------------------------
+======== SCROLLBAR ========
+--------------------------->
+
 <div id="scrollbar-track">
     <div id="scrollbar-thumb"></div>
 </div>
