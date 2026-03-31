@@ -33,6 +33,19 @@ document.querySelector("#form-cadastro").addEventListener("submit", function(e)
     const senha = senhaInput.trim();
     const confirmarSenha = confirmarSenhaInput.trim();
 
+    //* Validar usuário.
+    if (nome.length > 12)
+    {
+        alert("O nome deve ter no máximo 12 caracteres.");
+        return;
+    }
+
+    if (nome.length < 3)
+    {
+        alert("O nome deve ter pelo menos 3 caracteres.");
+        return;
+    }
+
     //* Validar senha.
     if (senha.length < 6)
     {

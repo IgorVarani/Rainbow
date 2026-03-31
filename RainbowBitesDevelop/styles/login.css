@@ -199,7 +199,7 @@ body{
 
 
 
-#botao-login{
+#botao-login-form{
     width: 100%;
     padding: 16px;
     margin-top: 15px;
@@ -223,7 +223,7 @@ body{
     transition: 0.2s;
 }
 
-#botao-login:hover{
+#botao-login-form:hover{
     transform: scale(1.05);
 }
 

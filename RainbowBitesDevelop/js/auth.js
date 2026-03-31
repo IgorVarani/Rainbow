@@ -1,13 +1,13 @@
-const botaoLogin = document.getElementById("botao-login");
+const botaoLogin = document.getElementById("botao-login-header");
 const usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado"));
 
 if (usuarioLogado)
 {
-    botaoLogin.innerHTML = `<i class="fa-solid fa-user"></i> ${usuarioLogado.nome}`;
+    botaoLogin.innerHTML = `<i class="fa-solid fa-user"></i>${usuarioLogado.nome}`;
 
     botaoLogin.addEventListener("click", () =>
     {
-        const confirmar = confirm("Deseja sair da conta?");
+        const confirmar = confirm("Deseja sair do Rainbow?");
 
         if (confirmar)
         {

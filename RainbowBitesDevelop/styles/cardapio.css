@@ -1,3 +1,22 @@
+/**=====================
+**======= FONTES =======
+**=====================*/
+
+
+
+/*
+! Títulos, botões
+font-family: 'Orbitron', sans-serif;
+
+! Inputs
+font-family: 'Share Tech Mono', monospace;
+
+! UI geral
+font-family: 'Audiowide', sans-serif;
+*/
+
+
+
 /**=========================
 **======== CONFIGS =========
 **==========================*/
@@ -42,10 +61,11 @@ body{
 }
 
 #header-links a{
-    display: flex;
+    font-family: 'Audiowide', sans-serif;
+    font-size: 17px;
+    font-weight: lighter;
     gap: 5px;
     color: white;
-    font-size: 20px;
     text-decoration: none;
 
     transition: 0.2s ease;
