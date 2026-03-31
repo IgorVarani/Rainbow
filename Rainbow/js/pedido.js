@@ -1,13 +1,37 @@
-let botaoIniciar = document.getElementById("botao-iniciar-pedido");
-let modal = document.getElementById("div-pedido");
-let fechar = document.getElementById("botao-fechar-pedido");
+const botaoIniciar = document.getElementById("botao-iniciar-pedido");
+const modal = document.getElementById("div-pedido");
+const botaoFechar = document.getElementById("botao-fechar-pedido");
 
-botaoIniciar.addEventListener("click", () =>
+function usuarioEstaLogado()
 {
-    modal.classList.remove("oculto");
-});
+    return localStorage.getItem("usuarioLogado") !== null;
+}
 
-fechar.addEventListener("click", () =>
+function abrirModal()
 {
-    modal.classList.add("oculto");
-});
+    if (modal) modal.classList.remove("oculto");
+}
+
+function fecharModal()
+{
+    if (modal) modal.classList.add("oculto");
+}
+
+if (botaoIniciar)
+{
+    botaoIniciar.addEventListener("click", () =>
+    {
+        if (!usuarioEstaLogado())
+        {
+            alert("Você precisa estar logado para fazer um pedido! Junte-se a nós e descubra cores de sabores incríveis!");
+            window.location.href = "/pages/login.html";
+            return;
+        }
+        abrirModal();
+    });
+}
+
+if (botaoFechar)
+{
+    botaoFechar.addEventListener("click", fecharModal);
+}

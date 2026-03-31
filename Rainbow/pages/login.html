@@ -12,39 +12,57 @@
 
 <body>
 
-<div id="container-login">
+<!-------------------------
+===========================
+========= LOGIN ===========
+===========================
+--------------------------->
 
-    <div id="card-login">
+<div id="div-login-container">
 
-        <h1 id="titulo-login">Rainbow Login</h1>
+<!-------------------------
+====== LADO IMAGEM ========
+--------------------------->
+    
+<div id="div-login-imagem"></div>
 
-        <form>
+<!-------------------------
+====== LADO FORM ==========
+--------------------------->
 
-            <div class="input-group">
-                <i class="fa-solid fa-envelope"></i>
-                <input type="email" placeholder="E-mail">
-            </div>
+    <div id="div-login-form">
 
-            <div class="input-group">
-                <i class="fa-solid fa-lock"></i>
-                <input type="password" placeholder="Senha">
-            </div>
+        <div id="div-login-conteudo">
 
-            <button type="submit" id="botao-login">Entrar</button>
+            <h1 id="titulo-login">Bem-Vindo(a) ao Rainbow Bites</h1>
 
-        </form>
+            <form>
 
-        <p id="extra">
-            Não tem conta? <a href="#">Criar agora</a>
-        </p>
+                <div class="div-input">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" id="email" placeholder="E-mail">
+                </div>
 
-        <a href="/index.html" id="voltar">
-            <i class="fa-solid fa-arrow-rotate-left"></i> Continuar como convidado.
-        </a>
+                <div class="div-input">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="senha" placeholder="Senha">
+                </div>
+
+                <button type="submit" id="botao-login">Entrar</button>
+
+            </form>
+
+            <p id="texto-login-extra">Não tem conta?<a href="/pages/cadastro.html">Criar agora</a></p>
+
+            <a href="/index.html" id="link-voltar">Continuar como convidado.</a>
+
+        </div>
 
     </div>
 
 </div>
+
+<script src="/js/login.js"></script>
 
 </body>
 </html>
