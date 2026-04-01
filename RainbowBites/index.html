@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainbow Bites</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/scrollbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Audiowide&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    
+    <script src="/js/auth.js" defer></script>
+    <script src="/js/modal.js" defer></script>
+
+</head>
+<body>
+
+<!--?----------------------->
+<!--?         FAQ1 
+<!--?----------------------->
+
+<!--?  Eu deixei a modal do FAQ acima para resolver bugs.  -->
+<!--?  Este projeto foi feito no "freestyle", sem protótipo.  -->
+<!--?  Que sirva de lição para você leitor, beijos e abraços.  -->
+
+<div id="div-faq" class="oculto">
+    <div id="conteudo-faq">
+
+        <p id="titulo-conteudo-faq">Dúvidas Frequentes:</p>
+
+         <div class="faq-item">
+            <p class="pergunta">Quais formas de pagamento?</p>
+            <p class="resposta">Cartão, dinheiro e PIX.</p>
+        </div>
+
+        <div class="faq-item">
+            <p class="pergunta">É possível pedir sem login?</p>
+            <p class="resposta">Sem cadastro, somente presencialmente.</p>
+        </div>       
+
+        <div class="faq-item">
+            <p class="pergunta">Vocês fazem entrega?</p>
+            <p class="resposta">Sim! Entregamos no ABC Paulista inteiro.</p>
+        </div>
+
+        <button id="botao-fechar-faq">Fechar</button>
+
+    </div>
+</div>
+
+<!--?----------------------->
+<!--?       HEADER 
+<!--?----------------------->
+
+<header>
+
+<div id="div-topo">
+    <div id="div-titulo">
+        <button id="botao-menu">&#9776;</button>
+        <h1 id="titulo">Rainbow Bites</h1>
+        <button id="botao-login-header">Entrar</button>
+    </div>
+    
+    <ul id="ul-titulo">
+        <li class="liTitulo"><a href="/pages/cardapio.html" class="linkTitulo">Cardápio</a></li>
+        <li class="liTitulo"><a href="/pages/lancamentos.html" class="linkTitulo">Lançamentos</a></li>
+    </ul>
+    
+    <h2 id="subtitulo">Com quantas cores você quer o seu pedido hoje?</h2>
+    <button id="botao-iniciar-pedido">Iniciar Pedido</button>
+</div>
+
+<!--?----------------------->
+<!--?     MENU LATERAL 
+<!--?----------------------->
+
+<div id="div-menu">
+    <!--* <nav> é o menu hambúrguer ou menu lateral. -->
+    <nav id="nav-menu">
+        <button id="botao-fechar-menu"><i class="fa-solid fa-xmark"></i></button>
+
+        <ul id="menu-itens">
+            <li><a href="/pages/cardapio.html" class="linkMenu"><i class="fa-solid fa-book"></i>Cardápio</a></li>
+            <li class="menu-divider"></li>
+
+            <li><a href="/pages/lancamentos.html" class="linkMenu"><i class="fa-solid fa-tag"></i>Lançamentos</a></li>
+            <li class="menu-divider"></li>
+
+            <li><button id="botao-faq-menu" class="linkMenu"><i class="fa-solid fa-circle-question"></i>Dúvidas</button></li>
+            <li class="menu-divider"></li>
+        </ul>
+
+        <img src="/assets/bg/mlBG.png" id="menu-bg">
+    </nav>
+</div>
+
+<script src="/js/menu.js"></script> <!-- JS do Menu Hambúrguer. -->
+
+<!--?----------------------->
+<!--?       PEDIDO 
+<!--?----------------------->
+
+<div id="div-pedido" class="oculto">
+    <div id="conteudo-pedido">
+
+        <p id="titulo-pedido">Como deseja receber seu pedido?</p>
+
+        <div id="opcoes-pedido">
+            <button class="botao-opcao-pedido" id="btn-retirada">
+                <i class="fa-solid fa-bag-shopping"></i>Pedir e Retirar</button>
+
+            <button class="botao-opcao-pedido" id="btn-delivery">
+                <i class="fa-solid fa-truck"></i>Rainbow Delivery</button>
+        </div>
+
+        <div id="etapa-delivery" class="oculto">
+            <p class="subtitulo-pedido">Digite seu CEP:</p>
+
+            <input type="text" id="input-cep" placeholder="00000-000">
+            <button id="btn-buscar-cep">Buscar CEP</button>
+
+            <div id="resultado-endereco"></div>
+        </div>
+
+        <div id="etapa-retirada" class="oculto">
+            <p class="subtitulo-pedido">Retire seu pedido em:</p>
+            
+            <div id="info-retirada">
+                <p><strong>Local:</strong> Rainbow Bites</p>
+                <p><strong>CEP:</strong> 09572-000</p>
+                <p><strong>Bairro:</strong> Centro</p>
+                <p><strong>Cidade:</strong> São Caetano do Sul - SP</p>
+            </div>
+            
+            <p id="tempo-retirada">Tempo estimado: 20-30 minutos</p>
+        </div>
+
+        <button id="botao-fechar-pedido">Fechar</button>
+        <button id="btn-continuar" class="oculto">Continuar Pedido</button>
+
+    </div>
+</div>
+
+<!--?----------------------->
+<!--?       CARRINHO 
+<!--?----------------------->
+
+<div id="div-carrinho" class="oculto">
+    <div id="conteudo-carrinho">
+        <p id="titulo-carrinho">Monte seu pedido:</p>
+
+        <div id="lista-produtos"></div>
+
+        <div id="carrinho">
+            <p><strong>Carrinho:</strong></p>
+            <ul id="itens-carrinho"></ul>
+            <p id="total-carrinho">Total: R$0.00</p>
+        </div>
+
+        <button id="botao-fechar-carrinho">Fechar</button>
+        <button id="botao-concluir-carrinho">Concluir Pedido</button>
+    </div>
+</div>
+
+</header>
+
+<!--?----------------------->
+<!--?       CARROSSEL 
+<!--?----------------------->
+
+<hr id="linha-decorativa">
+
+<section id="conteudo-principal">
+
+<div id="div-carrosseis">
+
+    <div class="div-carrossel">
+        <button class="botao-anterior">&#10094;</button>
+        
+        <div class="div-slides">
+            <img src="/assets/img/Rainbow Burger.png" class="slide ativo">
+            <img src="/assets/img/Rainbow Chicken.png" class="slide">
+            <img src="/assets/img/Rainbow Burger Bacon.png" class="slide">
+        </div>
+        
+        <button class="botao-proximo">&#10095;</button>
+    </div>
+    
+        
+    <div class="div-carrossel">
+        <button class="botao-anterior">&#10094;</button>
+
+        <div class="div-slides">
+            <img src="/assets/img/Rainbow Milkshake.png" class="slide ativo">
+            <img src="/assets/img/Rainbow Soda.png" class="slide">
+            <img src="/assets/img/Rainbow Orange.png" class="slide">
+        </div>
+
+        <button class="botao-proximo">&#10095;</button>
+    </div>
+
+    <div class="div-carrossel">
+        <button class="botao-anterior">&#10094;</button>
+
+        <div class="div-slides">
+            <img src="/assets/img/Rainbow Fries.png" class="slide ativo">
+            <img src="/assets/img/Rainbow Nuggets.png" class="slide">
+            <img src="/assets/img/Rainbow Onion Rings.png" class="slide">
+        </div>
+
+        <button class="botao-proximo">&#10095;</button>
+    </div>
+
+</div>
+    
+<script src="/js/carrossel.js"></script> <!-- JS do Carrossel. -->
+
+</section>
+
+<!--?----------------------->
+<!--?         FAQ2 
+<!--?----------------------->
+
+<section id="faq">
+
+<p id="titulo-faq">Como podemos te ajudar?</p>
+<button id="botao-faq">Dúvidas Frequentes</button>
+
+</section>
+
+<!--?----------------------->
+<!--?       FOOTER 
+<!--?----------------------->
+
+<footer id="footer">
+
+    <div id="div-footer">
+
+        <div class="footer-coluna">
+            <h3 class="footer-titulo">Rainbow Bites</h3>
+            <p class="footer-texto">
+                O fast-food mais colorido do Brasil. Experimente sabores únicos com um toque RGB.
+            </p>
+        </div>
+
+        <div class="footer-coluna">
+            <h3 class="footer-titulo">Navegação</h3>
+            <ul class="footer-lista">
+                <li><a href="/pages/cardapio.html">Cardápio</a></li>
+                <li><a href="/pages/lancamentos.html">Lançamentos</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-coluna">
+            <h3 class="footer-titulo">Contato</h3>
+            <p class="footer-texto"><i class="fa-solid fa-envelope"></i>contato@rainbowbites.com</p>
+            <p class="footer-texto"><i class="fa-solid fa-phone"></i>(11) 99999-9999</p>
+        </div>
+
+        <div class="footer-coluna">
+            <h3 class="footer-titulo">Redes</h3>
+            <div class="footer-redes">
+                <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                <a href="https://www.facebook.com/?locale=pt_BR"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                <a href="https://x.com/?lang=pt"><i class="fa-brands fa-x-twitter"></i> X</a>
+            </div>
+        </div>
+
+    </div>
+
+<hr id="linha-direitos">
+
+    <div id="footer-direitos">
+        <p>©2026 Rainbow Bites. Todos os direitos reservados</p>
+    </div>
+
+</footer>
+
+<!--?----------------------->
+<!--?      SCROLLBAR 
+<!--?----------------------->
+
+<div id="scrollbar-track">
+    <div id="scrollbar-thumb"></div>
+</div>
+
+<script src="/js/scrollbar.js"></script>
+
+</body>
+</html>

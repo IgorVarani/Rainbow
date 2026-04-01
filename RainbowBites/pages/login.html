@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Rainbow Bites</title>
+    <link rel="stylesheet" href="/styles/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Audiowide&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div id="div-login-container">
+
+<!--?----------------------->
+<!--?      LADO IMAGEM 
+<!--?----------------------->
+    
+<div id="div-login-imagem"></div>
+
+<!--?----------------------->
+<!--?      LADO FORM 
+<!--?----------------------->
+
+    <div id="div-login-form">
+
+        <div id="div-login-conteudo">
+
+            <h1 id="titulo-login">Bem-Vindo(a) ao Rainbow Bites</h1>
+
+            <form id="form-login">
+
+                <div class="div-input">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" id="email" placeholder="E-mail">
+                </div>
+
+                <div class="div-input">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="senha" placeholder="Senha">
+                </div>
+
+                <button type="submit" id="botao-login-form">Entrar</button>
+
+                <button type="button" id="botao-esqueci">Esqueci minha senha</button>
+
+            </form>
+
+            <p id="texto-login-extra">Não tem conta?<a href="/pages/cadastro.html">Criar agora</a></p>
+
+            <a href="/index.html" id="link-voltar">Continuar como convidado.</a>
+
+        </div>
+
+    </div>
+
+<!--?----------------------->
+<!--?    RECUPERAR SENHA
+<!--?----------------------->
+
+    <div id="modal-recuperar-senha">
+        <div class="modal-conteudo">
+
+            <span id="fechar-modal">&times;</span>
+            <h2>Redefinir senha</h2>
+
+            <input type="email" id="email-recuperar" placeholder="Digite seu e-mail">
+            <input type="password" id="nova-senha" placeholder="Nova senha">
+            <input type="password" id="confirmar-nova-senha" placeholder="Confirmar nova senha">
+            
+            <button id="enviar-recuperar">Redefinir</button>
+
+        </div>
+    </div>
+
+</div>
+
+<script src="/js/login.js"></script>
+
+</body>
+</html>

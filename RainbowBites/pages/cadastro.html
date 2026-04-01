@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Rainbow Bites</title>
+    <link rel="stylesheet" href="/styles/cadastro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Audiowide&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div id="div-cadastro-container">
+
+<!--?----------------------->
+<!--?      LADO IMAGEM 
+<!--?----------------------->
+
+    <div id="div-cadastro-imagem"></div>
+
+<!--?----------------------->
+<!--?      LADO FORM 
+<!--?----------------------->
+
+    <div id="div-cadastro-form">
+
+        <div id="div-cadastro-conteudo">
+
+            <h1 id="titulo-cadastro">Novo(a) Por Aqui?</h1>
+
+            <form id="form-cadastro">
+
+                <div class="div-input">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" id="nome" placeholder="Usuário" maxlength="12">
+                </div>
+
+                <div class="div-input">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" id="email" placeholder="E-mail">
+                </div>
+
+                <div class="div-input">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="senha" placeholder="Senha">
+                </div>
+
+                <div class="div-input">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="confirmarSenha" placeholder="Confirmar senha">
+                </div>
+
+                <button type="submit" id="botao-cadastro">Criar Conta</button>
+
+            </form>
+
+            <p id="texto-cadastro-extra">Já tem conta? <a href="/pages/login.html">Entrar</a></p>
+
+            <a href="/index.html" id="link-voltar-cadastro">Continuar como convidado.</a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="/js/cadastro.js"></script>
+
+</body>
+</html>

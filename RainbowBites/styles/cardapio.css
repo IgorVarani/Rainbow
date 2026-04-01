@@ -1,0 +1,163 @@
+/*?=====================*/
+/*?    ⬇️ FONTES ⬇️    */
+/*?=====================*/
+
+/*
+* Títulos, botões
+font-family: 'Orbitron', sans-serif;
+
+* Descrições, preços, detalhes
+font-family: 'Share Mono Tech', sans-serif;
+
+* Menu, navbar, nome dos produtos
+font-family: 'Audiowide', sans-serif;
+*/
+
+/*?======================*/
+/*?    ⬇️ CONFIGS ⬇️    */
+/*?======================*/
+
+@keyframes rgbFlow{
+    0% { background-position: 0%; }
+    100% { background-position: 400%; }
+}
+
+@keyframes rgbGlow{
+    0% { background-position: 0% 50%; }
+    100% { background-position: 400% 50%; }
+}
+
+body{
+    margin: 0;
+    margin-bottom: 60px;
+    background-color: #191919;
+    color: white;
+}
+
+/*?=====================*/
+/*?    ⬇️ NAVBAR ⬇️    */
+/*?=====================*/
+
+#navbar{
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #191919;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+#header-links{
+    display: flex;
+    gap: 25px;
+}
+
+#header-links a{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-family: 'Audiowide', sans-serif;
+    font-size: 17px;
+    color: white;
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+#header-links a:hover{
+    transform: scale(1.1);
+}
+
+/*?=====================*/
+/*?    ⬇️ HEADER ⬇️    */
+/*?=====================*/
+
+#header-cardapio{
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#titulo-cardapio{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 40px;
+    font-weight: bolder;
+
+    background: linear-gradient(270deg, red, orange, yellow, lime, cyan, blue, magenta, red);
+    background-size: 400%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: rgbFlow 10s linear infinite;
+}
+
+#subtitulo-cardapio{
+    font-family: 'Audiowide', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: -20px;
+}
+
+/*?=====================*/
+/*?    ⬇️ CARDS ⬇️     */
+/*?=====================*/
+
+.categoria{
+    margin: 40px 0;
+    text-align: center;
+    font-family: 'Audiowide', sans-serif;
+}
+
+.grid-cardapio{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card{
+    width: 250px;
+    padding: 15px;
+    text-align: center;
+
+    border-radius: 10px;
+    border: 3px solid transparent;
+
+    background: linear-gradient(#000, #000) padding-box,
+                linear-gradient(270deg, red, yellow, lime, cyan, blue, magenta, red) border-box;
+
+    background-size: 400% 400%;
+    animation: rgbGlow 10s linear infinite;
+
+    transition: 0.2s;
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+.card img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card h3{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 25px;
+}
+
+.card p{
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 15px;
+}
+
+.preco{
+    display: block;
+    margin-top: 10px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 20px;
+    font-weight: bold;
+}
