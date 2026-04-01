@@ -29,6 +29,11 @@ body{
     100% { background-position: 400%; }
 }
 
+@keyframes rgbGlow{
+    0% { background-position: 0% 50%; }
+    100% { background-position: 400% 50%; }
+}
+
 /*?=====================*/
 /*?    ⬇️ NAVBAR ⬇️    */
 /*?=====================*/
@@ -36,14 +41,10 @@ body{
 #header-navbar{
     position: sticky;
     top: 0;
-
     display: flex;
     align-items: center;
-
     padding: 15px 20px;
-
     background-color: #191919;
-
     border-bottom: 1px solid rgba(255,255,255,0.1);
 
     z-index: 1000;
@@ -58,10 +59,8 @@ body{
     display: flex;
     align-items: center;
     gap: 8px;
-
     font-family: 'Audiowide', sans-serif;
     font-size: 17px;
-
     color: white;
     text-decoration: none;
 
@@ -83,20 +82,20 @@ body{
 
 #titulo-lancamentos{
     font-family: 'Orbitron', sans-serif;
-    font-size: 40px;
-
+    font-size: 45px;
     background: linear-gradient(270deg, red, orange, yellow, lime, cyan, blue, magenta, red);
     background-size: 400%;
-
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    animation: rgbFlow 12s linear infinite;
+    animation: rgbFlow 10s linear infinite;
 }
 
 #texto-subtitulo-lancamentos{
     font-family: 'Audiowide', sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
 }
 
 /*?=====================*/
@@ -104,28 +103,30 @@ body{
 /*?=====================*/
 
 #section-lancamentos{
-    padding: 40px;
+    padding: 30px;
 }
 
 #div-lancamentos-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    gap: 35px;
 }
 
 .div-lancamento-card{
     display: flex;
     flex-direction: column;
-
     min-height: 340px;
-
-    border-radius: 15px;
     overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid transparent;
 
-    border: 2px solid #2a2a2a;
-    background-color: #111;
+    background: linear-gradient(#000, #000) padding-box,
+                linear-gradient(270deg, red, yellow, lime, cyan, blue, magenta, red) border-box;
 
-    transition: 0.25s ease;
+    background-size: 400% 400%;
+    animation: rgbGlow 10s linear infinite;
+
+    transition: 0.2s ease;
 }
 
 .div-lancamento-card:hover{
@@ -141,34 +142,36 @@ body{
 .div-lancamento-info{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-
+    align-items: center;
     flex: 1;
-    padding: 18px;
+    padding: 15px;
 }
 
 .div-lancamento-info h3{
     font-family: 'Orbitron', sans-serif;
-    font-size: 20px;
-    margin-bottom: 8px;
+    font-size: 25px;
+    margin-bottom: 10px;
+    margin-top: 5px;
 }
 
 .div-lancamento-info p{
-    font-size: 14px;
-    opacity: 0.8;
+    font-size: 15px;
+    opacity: 0.9;
 }
 
 .span-badge{
-    align-self: flex-start;
-
-    margin-top: 15px;
-    padding: 6px 12px;
-
-    border-radius: 20px;
-
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
     font-family: 'Audiowide', sans-serif;
-    font-size: 11px;
+    font-size: 15px;
 
-    background-color: #222;
-    border: 1px solid #444;
+    border-radius: 10px;
+    border: 2px solid transparent;
+
+    background: linear-gradient(#000, #000) padding-box,
+                linear-gradient(270deg, red, yellow, lime, cyan, blue, magenta, red) border-box;
+
+    background-size: 400% 400%;
+    animation: rgbGlow 10s linear infinite;
 }

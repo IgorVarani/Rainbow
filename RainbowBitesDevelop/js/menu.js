@@ -16,3 +16,34 @@ overlay.addEventListener("click", (e) =>
         overlay.classList.remove("ativo");
     }
 });
+
+
+//? Fechar o menu ao pressionar a tecla "Escape".
+document.addEventListener("keydown", (e) =>
+{
+    if (e.key === "Escape") {
+        nav.classList.remove("ativo");
+        overlay.classList.remove("ativo");
+    }
+});
+
+//? Fechar o menu ao clicar no botão "X".
+let botaoFechar = document.getElementById("botao-fechar-menu");
+
+botaoFechar.addEventListener("click", () =>
+{
+    nav.classList.remove("ativo");
+    overlay.classList.remove("ativo");
+});
+
+//? Abrir o FAQ.
+let botaoFaqMenu = document.getElementById("botao-faq-menu");
+let faq = document.getElementById("div-faq");
+
+botaoFaqMenu.addEventListener("click", () =>
+{
+    faq.classList.remove("oculto");
+
+    nav.classList.remove("ativo");
+    overlay.classList.remove("ativo");
+});

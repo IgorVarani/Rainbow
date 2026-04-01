@@ -10,9 +10,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Audiowide&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     
     <script src="/js/auth.js" defer></script>
+    <script src="/js/modal.js" defer></script>
 
 </head>
 <body>
+
+<!--?----------------------->
+<!--?         FAQ1 
+<!--?----------------------->
+
+<!--?  Eu deixei a modal do FAQ acima para resolver bugs.  -->
+<!--?  Este projeto foi feito no "freestyle", sem protótipo.  -->
+<!--?  Que sirva de lição para você leitor, beijos e abraços.  -->
+
+<div id="div-faq" class="oculto">
+    <div id="conteudo-faq">
+
+        <p id="titulo-conteudo-faq">Dúvidas Frequentes:</p>
+
+         <div class="faq-item">
+            <p class="pergunta">Quais formas de pagamento?</p>
+            <p class="resposta">Cartão, dinheiro e PIX.</p>
+        </div>
+
+        <div class="faq-item">
+            <p class="pergunta">É possível pedir sem login?</p>
+            <p class="resposta">Sem cadastro, somente presencialmente.</p>
+        </div>       
+
+        <div class="faq-item">
+            <p class="pergunta">Vocês fazem entrega?</p>
+            <p class="resposta">Sim! Entregamos no ABC Paulista inteiro.</p>
+        </div>
+
+        <button id="botao-fechar-faq">Fechar</button>
+
+    </div>
+</div>
 
 <!--?----------------------->
 <!--?       HEADER 
@@ -43,10 +77,20 @@
 <div id="div-menu">
     <!--* <nav> é o menu hambúrguer ou menu lateral. -->
     <nav id="nav-menu">
+        <button id="botao-fechar-menu"><i class="fa-solid fa-xmark"></i></button>
+
         <ul id="menu-itens">
             <li><a href="/pages/cardapio.html" class="linkMenu"><i class="fa-solid fa-book"></i>Cardápio</a></li>
+            <li class="menu-divider"></li>
+
             <li><a href="/pages/lancamentos.html" class="linkMenu"><i class="fa-solid fa-tag"></i>Lançamentos</a></li>
+            <li class="menu-divider"></li>
+
+            <li><button id="botao-faq-menu" class="linkMenu"><i class="fa-solid fa-circle-question"></i>Dúvidas</button></li>
+            <li class="menu-divider"></li>
         </ul>
+
+        <img src="/assets/bg/mlBG.png" id="menu-bg">
     </nav>
 </div>
 
@@ -58,40 +102,70 @@
 
 <div id="div-pedido" class="oculto">
     <div id="conteudo-pedido">
-        <p id="titulo-pedido">Monte o pedido mais colorido de todos:</p>
 
-        <label class="labelPedido">Hambúrguer:</label>
-        <select class="selectPedido">
-            <option class="optionPedido">RGBurger</option>
-            <option class="optionPedido">CMYK Chicken</option>
-            <option class="optionPedido">Color Bacon</option>
-        </select>
+        <p id="titulo-pedido">Como deseja receber seu pedido?</p>
 
-        <br><br>
+        <div id="opcoes-pedido">
+            <button class="botao-opcao-pedido" id="btn-retirada">
+                <i class="fa-solid fa-bag-shopping"></i>
+                Pedir e Retirar
+            </button>
 
-        <label class="labelPedido">Acompanhamento:</label>
-        <select class="selectPedido">
-            <option class="optionPedido">Rainbow Fries</option>
-            <option class="optionPedido">Crunchy Nuggets</option>
-            <option class="optionPedido">Elden Rings</option>
-        </select>
+            <button class="botao-opcao-pedido" id="btn-delivery">
+                <i class="fa-solid fa-truck"></i>
+                Rainbow Delivery
+            </button>
+        </div>
 
-        <br><br>
+        <div id="etapa-delivery" class="oculto">
+            <p class="subtitulo-pedido">Digite seu CEP:</p>
 
-        <label class="labelPedido">Bebida:</label>
-        <select class="selectPedido">
-            <option class="optionPedido">Rainbow Shake</option>
-            <option class="optionPedido">Ultra Cola</option>
-            <option class="optionPedido">Hyper Orange</option>
-        </select>
+            <input type="text" id="input-cep" placeholder="00000-000">
+            <button id="btn-buscar-cep">Buscar CEP</button>
 
-        <br><br>
+            <div id="resultado-endereco"></div>
+        </div>
 
-        <button id="botao-fechar-pedido">Fechar Pedido</button>
+        <div id="etapa-retirada" class="oculto">
+            <p class="subtitulo-pedido">Retire seu pedido em:</p>
+            
+            <div id="info-retirada">
+                <p><strong>Local:</strong> Rainbow Bites</p>
+                <p><strong>CEP:</strong> 09572-000</p>
+                <p><strong>Bairro:</strong> Centro</p>
+                <p><strong>Cidade:</strong> São Caetano do Sul - SP</p>
+            </div>
+            
+            <p id="tempo-retirada">Tempo estimado: 20-30 minutos</p>
+        </div>
+
+        <button id="botao-fechar-pedido">Fechar</button>
+        <button id="btn-continuar" class="oculto">Continuar Pedido</button>
+
     </div>
 </div>
 
-<script src="/js/pedido.js"></script> <!-- JS do Pedido. -->
+<!--?----------------------->
+<!--?       CARRINHO 
+<!--?----------------------->
+
+<div id="div-carrinho" class="oculto">
+    <div id="conteudo-carrinho">
+
+        <p id="titulo-carrinho">Monte seu pedido</p>
+
+        <div id="lista-produtos"></div>
+
+        <div id="carrinho">
+            <p><strong>Carrinho:</strong></p>
+            <ul id="itens-carrinho"></ul>
+            <p id="total-carrinho">Total: R$ 0.00</p>
+        </div>
+
+        <button id="botao-fechar-carrinho">Fechar</button>
+
+    </div>
+</div>
 
 </header>
 
@@ -149,21 +223,13 @@
 </section>
 
 <!--?----------------------->
-<!--?         FAQ 
+<!--?         FAQ2 
 <!--?----------------------->
 
 <section id="faq">
 
 <p id="titulo-faq">Como podemos te ajudar?</p>
 <button id="botao-faq">Dúvidas Frequentes</button>
-
-<div id="div-faq" class="oculto">
-    <div id="conteudo-faq">
-
-        <p id="titulo-conteudo-faq"></p>
-
-    </div>
-</div>
 
 </section>
 
