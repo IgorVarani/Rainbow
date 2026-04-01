@@ -28,6 +28,27 @@ function fecharModal(modal)
 //?       PEDIDO
 //? ===================
 
+//? Resetar ao usar o botão fechar.
+function resetarPedidoCompleto()
+{
+    carrinho = [];
+
+    const lista = document.getElementById("itens-carrinho");
+    const totalEl = document.getElementById("total-carrinho");
+
+    if (lista) lista.innerHTML = "";
+    if (totalEl) totalEl.textContent = "Total: R$0.00";
+
+    if (inputCep) inputCep.value = "";
+    if (resultadoEndereco) resultadoEndereco.innerHTML = "";
+
+    resetarEtapas();
+
+    localStorage.removeItem("frete");
+    localStorage.removeItem("endereco");
+    localStorage.removeItem("tipoPedido");
+}
+
 //? ViaCEP.
 const btnBuscarCep = document.getElementById("btn-buscar-cep");
 const inputCep = document.getElementById("input-cep");
@@ -126,11 +147,11 @@ const produtos = [
     { nome: "Elden Rings", preco: 13.90 },
 
     //! PLACEHOLDER.
-    { nome: "Cyber Fries", preco: 0 },
-    { nome: "Galaxy Shake", preco: 0 },
-    { nome: "Hyper Soda", preco: 0 },
-    { nome: "Neon Burger", preco: 0 },
-    { nome: "Pixel Nuggets", preco: 0 }
+    { nome: "Cyber Fries", preco: 19.90 },
+    { nome: "Galaxy Shake", preco: 24.90 },
+    { nome: "Hyper Soda", preco: 10.90 },
+    { nome: "Neon Burger", preco: 27.90 },
+    { nome: "Pixel Nuggets", preco: 21.90 }
 ];
 
 const listaProdutos = document.getElementById("lista-produtos");
@@ -187,7 +208,7 @@ function atualizarCarrinho()
 
     let frete = Number(localStorage.getItem("frete")) || 0;
 
-    totalEl.textContent = `Total: R$ ${(total + frete).toFixed(2)}`;
+    totalEl.textContent = `Total: R$${(total + frete).toFixed(2)}`;
 }
 
 //? Modais.
@@ -197,6 +218,7 @@ const modalCarrinho = document.getElementById("div-carrinho");
 const botaoIniciar = document.getElementById("botao-iniciar-pedido");
 const botaoFecharPedido = document.getElementById("botao-fechar-pedido");
 const botaoFecharCarrinho = document.getElementById("botao-fechar-carrinho");
+const botaoConcluirCarrinho = document.getElementById("botao-concluir-carrinho");
 
 function usuarioEstaLogado()
 {
@@ -231,8 +253,74 @@ if (botaoIniciar)
 }
 
 //? Fechar modais.
-botaoFecharPedido?.addEventListener("click", () => fecharModal(modalPedido));
-botaoFecharCarrinho?.addEventListener("click", () => fecharModal(modalCarrinho));
+botaoFecharPedido?.addEventListener("click", () =>
+{
+    if (!confirm("Deseja cancelar o pedido atual?"))
+    {
+        return;
+    }
+
+    fecharModal(modalPedido);
+    resetarPedidoCompleto();
+});
+
+botaoFecharCarrinho?.addEventListener("click", () =>
+{
+    if (!confirm("Deseja cancelar o pedido atual?"))
+    {
+        return;
+    }
+
+    fecharModal(modalCarrinho);
+    resetarPedidoCompleto();
+});
+
+botaoConcluirCarrinho?.addEventListener("click", () =>
+{
+    if (carrinho.length === 0)
+    {
+        alert("Seu carrinho está vazio!");
+        console.log("Tentativa de finalizar com carrinho vazio.");
+        return;
+    }
+
+    const tipoPedido = localStorage.getItem("tipoPedido");
+
+    if (!tipoPedido)
+    {
+        alert("Escolha como deseja receber o pedido!");
+        console.log("Tipo de pedido não definido.");
+        return;
+    }
+
+    if (tipoPedido === "delivery")
+    {
+        const endereco = localStorage.getItem("endereco");
+
+        if (!endereco)
+        {
+            alert("Digite um CEP válido antes de continuar!");
+            console.log("Tentativa de delivery sem endereço.");
+            return;
+        }
+    }
+
+    let totalProdutos = carrinho.reduce((acc, item) => acc + item.preco, 0);
+    let frete = Number(localStorage.getItem("frete")) || 0;
+    let totalFinal = totalProdutos + frete;
+
+    console.log("===== PEDIDO FINAL =====");
+    console.log("Tipo:", tipoPedido);
+    console.log("Itens:", carrinho);
+    console.log("Total produtos:", totalProdutos.toFixed(2));
+    console.log("Frete:", frete.toFixed(2));
+    console.log("Total final:", totalFinal.toFixed(2));
+
+    alert(`Pedido realizado com sucesso!\nTotal: R$ ${totalFinal.toFixed(2)}`);
+
+    fecharModal(modalCarrinho);
+    resetarPedidoCompleto();
+});
 
 //? Tipo pedido.
 const btnRetirada = document.getElementById("btn-retirada");

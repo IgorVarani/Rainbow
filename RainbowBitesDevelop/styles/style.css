@@ -643,6 +643,7 @@ strong{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 5px;
+    border-radius: 15px;
     padding: 10px;
 
     background: rgba(90, 90, 90, 0.6);
@@ -661,12 +662,14 @@ strong{
     cursor: pointer;
     color: white;
     font-size: 20px;
-    padding: 5px 5px;
+    padding: 5px;
     width: 10%;
+    margin-right: 10px;
+    border-radius: 15px;
     border: 2px solid transparent;
 
     background: linear-gradient(rgba(90, 90, 90, 0.6), #000) padding-box,
-                linear-gradient(270deg, red, yellow, lime, cyan, blue, magenta, red) border-box;
+                linear-gradient(270deg, red, rgb(37, 37, 37), lime, cyan, blue, magenta, red) border-box;
     background-size: 400% 400%;
     animation: rgbGlow 10s linear infinite;
 
@@ -674,12 +677,69 @@ strong{
 }
 
 .produto button:hover{
-    transform: scaleX(1.2) scaleY(1.1);
+    transform: scaleX(1.3) scaleY(1.2);
 }
 
 #carrinho{
-    margin-top: 20px;
     font-family: 'Share Tech Mono', monospace;
+}
+
+#carrinho strong{
+    font-family: 'Audiowide', sans-serif;
+    font-size: 25px;
+}
+
+#itens-carrinho{
+    font-family: 'Share Tech Mono', monospace;
+    max-height: 175px;
+    overflow-y: auto;
+    text-align: center;
+    padding: 0;
+    border-radius: 20px;
+    border: 2px solid transparent;
+
+    background: linear-gradient(#000, #000) padding-box,
+                linear-gradient(270deg, red, rgb(37, 37, 37), lime, cyan, blue, magenta, red) border-box;
+    background-size: 400% 400%;
+    animation: rgbGlow 10s linear infinite;
+}
+
+#itens-carrinho li{
+    padding: 10px;
+    list-style: none;
+    line-height: 0.9;
+    font-size: 20px;
+    border-radius: 0px;
+    border: 1px solid rgb(70, 70, 70);
+}
+
+#total-carrinho{
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 20px;
+}
+
+#botao-fechar-carrinho, #botao-concluir-carrinho{
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+    border: 2px solid transparent;
+
+    background: linear-gradient(#000, #000) padding-box,
+                linear-gradient(270deg, red, yellow, lime, cyan, blue, magenta, red) border-box;
+
+    background-size: 400% 400%;
+    animation: rgbGlow 10s linear infinite;
+
+    transition: 0.1s ease;
+}
+
+#botao-fechar-carrinho:hover, #botao-concluir-carrinho:hover{
+    transform: scale(1.1);
 }
 
 /*?========================*/
