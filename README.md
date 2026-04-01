@@ -1,6 +1,6 @@
 # 🌈 Rainbow Bites
 
-Projeto de aplicação web de um fast-food temático focado em cores vibrantes, experiência visual diferenciada e interatividade com o usuário.
+Projeto de aplicação web totalmente front-end com o objetivo de criar um fast-food temático focado em cores vibrantes, experiência visual diferenciada e interatividade com o usuário. A aplicação não é tão leve e é recomendado máquinas com CPU no nível mínimo de um Intel Core I5 7th. Navegadores como Opera GX, que possuem muitos elementos e funções, fazem com que o desempenho fique levemente pior.
 
 ---
 
@@ -64,7 +64,7 @@ O **Rainbow Bites** é uma aplicação web que simula o funcionamento de um sist
 
   * Hambúrguer RGB
   * Pixel Nuggets com efeito visual diferenciado
-* Estilo inspirado em fast-food futurista/colorido
+  * Estilo inspirado em fast-food futurista/colorido
 
 ---
 
@@ -99,65 +99,6 @@ O projeto segue uma identidade visual baseada em:
 * Tipografias modernas (ex: Share Tech Mono, Audiowide)
 * Elementos com blur e transparência
 * Interface futurista e chamativa
-
----
-
-## 📂 Estrutura do Projeto
-
-```
-📁 rainbow-bites
- ├── 📁 pages
- │   ├── cardapio.html
- │   └── ...
- │
- ├── 📁 css
- │   └── styles.css
- │
- ├── 📁 js
- │   ├── carrossel.js
- │   ├── login.js
- │   ├── carrinho.js
- │   └── pedido.js
- │
- └── index.html
-```
-
----
-
-## ⚙️ Funcionalidades em Desenvolvimento
-
-* Controle de quantidade de itens
-* Integração completa do fluxo de pedidos
-* Persistência de dados (localStorage ou backend)
-* Sistema de pagamento simulado
-
----
-
-## 💡 Possíveis Melhorias Futuras
-
-* Backend com Node.js ou Firebase
-* Autenticação real de usuários
-* API de produtos
-* Responsividade avançada
-* Animações mais complexas
-
----
-
-## 🧠 Aprendizados do Projeto
-
-Durante o desenvolvimento foram trabalhados conceitos como:
-
-* Manipulação do DOM
-* Eventos em JavaScript
-* Organização de código
-* Estruturação de interfaces
-* UX/UI básico
-
----
-
-## 📸 Preview do Projeto
-
-*(Adicionar imagens ou GIFs aqui futuramente)*
 
 ---
 
