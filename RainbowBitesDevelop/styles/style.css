@@ -7,7 +7,7 @@
 font-family: 'Orbitron', sans-serif;
 
 * Descrições, preços, detalhes
-font-family: 'Share Mono Tech', sans-serif;
+font-family: 'Share Tech Mono', monospace;
 
 * Menu, navbar, nome dos produtos
 font-family: 'Audiowide', sans-serif;
@@ -386,6 +386,10 @@ body.modal-aberto{
     transform: scale(1.1);
 }
 
+#botao-fechar-pedido{
+    margin-top: 35px;
+}
+
 #div-pedido{
     position: fixed;
     top: 0;
@@ -410,10 +414,10 @@ body.modal-aberto{
 
 #conteudo-pedido{
     color: white;
-    padding: 30px;
+    padding: 15px;
     text-align: center;
-    height: 500px;
-    width: 650px;
+    height: 700px;
+    width: 750px;
     border: 3px solid transparent;
     border-radius: 25px;
 
@@ -425,15 +429,15 @@ body.modal-aberto{
 
 #titulo-pedido{
     font-family: 'Orbitron', sans-serif;
-    font-size: 30px;
+    font-size: 35px;
     font-weight: bold;
 }
 
 #opcoes-pedido{
     display: flex;
     justify-content: center;
-    gap: 30px;
-    margin-top: 40px;
+    gap: 50px;
+    margin-top: 50px;
 }
 
 .botao-opcao-pedido{
@@ -441,10 +445,10 @@ body.modal-aberto{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 200px;
-    height: 150px;
+    width: 250px;
+    height: 200px;
     font-family: 'Orbitron', sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     color: white;
 
     border: 2px solid transparent;
@@ -461,24 +465,27 @@ body.modal-aberto{
 }
 
 .botao-opcao-pedido i{
-    font-size: 30px;
+    font-size: 35px;
     margin-bottom: 10px;
 }
 
 .botao-opcao-pedido:hover{
     transform: scale(1.1);
+    font-size: 22px;
 }
 
 .subtitulo-pedido{
     margin-top: 30px;
     font-family: 'Audiowide', sans-serif;
-    font-size: 18px;
+    font-size: 25px;
 }
 
 #input-cep{
-    margin-top: 15px;
-    padding: 10px;
+    margin-top: 5px;
+    padding: 10px 5px;
     width: 200px;
+    font-size: 15px;
+    font-family: 'Share Tech Mono', monospace;
 
     border-radius: 5px;
     border: 2px solid transparent;
@@ -494,7 +501,7 @@ body.modal-aberto{
 }
 
 #btn-buscar-cep{
-    margin-left: 10px;
+    margin-left: 15px;
     padding: 10px 15px;
     cursor: pointer;
 
@@ -509,39 +516,56 @@ body.modal-aberto{
 
     background-size: 400% 400%;
     animation: rgbGlow 10s linear infinite;
+
+    transition: 0.1s ease;
+}
+
+#btn-buscar-cep:hover{
+    transform: scale(1.1);
 }
 
 #resultado-endereco{
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: -25px;
     font-family: 'Share Tech Mono', monospace;
+}
+
+strong{
+    font-weight: lighter;
+    font-family: 'Audiowide', sans-serif;
 }
 
 #info-retirada{
-    margin-top: 20px;
+    margin-top: -10px;
     font-family: 'Share Tech Mono', monospace;
-    line-height: 1.6;
+    line-height: 1.4;
 }
 
 #tempo-retirada{
-    margin-top: 25px;
+    margin-top: 20px;
+    margin-bottom: 11px;
     font-family: 'Audiowide', sans-serif;
-    font-size: 18px;
+    font-size: 20px;
 
-    color: #00ffcc;
+    background: linear-gradient(270deg, red, orange, yellow, lime, cyan, blue, magenta, red);
+    background-size: 400%;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: rgbFlow 10s linear infinite;
 }
 
 #btn-continuar{
-    margin-top: 30px;
-
     font-family: 'Orbitron', sans-serif;
     font-weight: bold;
-
-    padding: 12px 30px;
-    border-radius: 8px;
-
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 5px;
     color: white;
     cursor: pointer;
-
+    margin-left: 10px;
     border: 2px solid transparent;
 
     background: linear-gradient(#000, #000) padding-box,
@@ -557,28 +581,100 @@ body.modal-aberto{
     transform: scale(1.1);
 }
 
+/*?========================*/
+/*?    ⬇️ CARRINHO ⬇️     */
+/*?========================*/
+
+#div-carrinho{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+#div-carrinho:not(.oculto){
+    display: flex;
+}
+
+#conteudo-carrinho{
+    color: white;
+    padding: 15px;
+    text-align: center;
+    height: 700px;
+    width: 750px;
+    border: 3px solid transparent;
+    border-radius: 25px;
+
+    background: linear-gradient(#000, #000) padding-box,
+                linear-gradient(270deg, red, yellow, lime, cyan, blue, magenta, red) border-box;
+    background-size: 400% 400%;
+    animation: rgbGlow 10s linear infinite;
+}
+
+#titulo-carrinho{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+}
+
 #lista-produtos{
     margin-top: 20px;
     max-height: 200px;
     overflow-y: auto;
+    padding: 15px;
+    border: 2px solid transparent;
+    border-radius: 15px;
+
+    background: linear-gradient(#000, #000) padding-box,
+                linear-gradient(270deg, red, yellow, lime, cyan, blue, magenta, red) border-box;
+    background-size: 400% 400%;
+    animation: rgbGlow 10s linear infinite;
 }
 
 .produto{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    align-items: center;
+    margin-bottom: 5px;
     padding: 10px;
 
-    border-radius: 8px;
+    background: rgba(90, 90, 90, 0.6);
+}
 
-    background: rgba(255,255,255,0.05);
+.produto:hover{
+    border: 2px solid transparent;
+
+    background: linear-gradient(#000, #000) padding-box,
+                linear-gradient(270deg, red, yellow, lime, cyan, blue, magenta, red) border-box;
+    background-size: 400% 400%;
+    animation: rgbGlow 10s linear infinite;
 }
 
 .produto button{
     cursor: pointer;
-    border-radius: 5px;
-    border: none;
-    padding: 5px 10px;
+    color: white;
+    font-size: 20px;
+    padding: 5px 5px;
+    width: 10%;
+    border: 2px solid transparent;
+
+    background: linear-gradient(rgba(90, 90, 90, 0.6), #000) padding-box,
+                linear-gradient(270deg, red, yellow, lime, cyan, blue, magenta, red) border-box;
+    background-size: 400% 400%;
+    animation: rgbGlow 10s linear infinite;
+
+    transition: 0.1s ease;
+}
+
+.produto button:hover{
+    transform: scaleX(1.2) scaleY(1.1);
 }
 
 #carrinho{
